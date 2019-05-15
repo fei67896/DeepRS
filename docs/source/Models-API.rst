@@ -1,16 +1,16 @@
-DeepCTR Models API
+DeepRS Models API
 ======================
 
 .. toctree::
 
-   FNN<deepctr.models.fnn>
-   PNN<deepctr.models.pnn>
-   WDL<deepctr.models.wdl>
-   DeepFM<deepctr.models.deepfm>
-   MLR<deepctr.models.mlr>
-   NFM<deepctr.models.nfm>
-   AFM<deepctr.models.afm>
-   DCN<deepctr.models.dcn>
-   DIN<deepctr.models.din>
-   xDeepFM<deepctr.models.xdeepfm>
-   AutoInt<deepctr.models.autoint>
+   FNN<deeprs.models.fnn>
+   PNN<deeprs.models.pnn>
+   WDL<deeprs.models.wdl>
+   DeepFM<deeprs.models.deepfm>
+   MLR<deeprs.models.mlr>
+   NFM<deeprs.models.nfm>
+   AFM<deeprs.models.afm>
+   DCN<deeprs.models.dcn>
+   DIN<deeprs.models.din>
+   xDeepFM<deeprs.models.xdeepfm>
+   AutoInt<deeprs.models.autoint>

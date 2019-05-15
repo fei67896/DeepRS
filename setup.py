@@ -9,14 +9,14 @@ REQUIRED_PACKAGES = [
 ]
 
 setuptools.setup(
-    name="deepctr",
-    version="0.2.1",
-    author="Weichen Shen",
-    author_email="wcshen1994@163.com",
-    description="Easy-to-use,Modular and Extendible package of deep learning based CTR(Click Through Rate) prediction models with tensorflow.",
+    name="DeepRS",
+    version="0.0.1",
+    author="YSZYCF",
+    author_email="476900563@qq.com",
+    description="Easy-to-use,Modular and Extendible package of deep learning based RS(Recommendation system) prediction models with tensorflow.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/shenweichen/deepctr",
+    url="https://github.com/YSZYCF/DeepRS",
     download_url='https://github.com/shenweichen/deepctr/tags',
     packages=setuptools.find_packages(exclude=["tests", "tests.models"]),
     python_requires='>=3.4',  # 3.4.6
@@ -44,6 +44,6 @@ setuptools.setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ),
     license="MIT license",
-    keywords=['ctr', 'click through rate',
+    keywords=['RS', 'Recommendation system',
               'deep learning', 'tensorflow', 'tensor', 'keras'],
 )

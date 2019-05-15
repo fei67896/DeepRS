@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Features &mdash; DeepRS 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Demos" href="Demo.html" />
+    <link rel="prev" title="Quick-Start" href="Quick-Start.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepRS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Home:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Quick-Start.html">Quick-Start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fnn-factorization-supported-neural-network">FNN (Factorization-supported Neural Network)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pnn-product-based-neural-network">PNN (Product-based Neural Network)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wide-deep">Wide &amp; Deep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deepfm">DeepFM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mlr-mixed-logistic-regression-piece-wise-linear-model">MLR(Mixed Logistic Regression/Piece-wise Linear Model)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nfm-neural-factorization-machine">NFM (Neural Factorization Machine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#afm-attentional-factorization-machine">AFM (Attentional Factorization Machine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dcn-deep-cross-network">DCN (Deep &amp; Cross Network)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#din-deep-interest-network">DIN (Deep Interest Network)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xdeepfm">xDeepFM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autoint-automatic-feature-interaction">AutoInt(Automatic Feature Interaction)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#layers">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#activations">Activations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sequence">Sequence</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Demo.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="History.html">History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Models-API.html">Models API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deepctr.layers.html">Layers API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deepctr.activations.html">Activations API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deepctr.sequence.html">Sequence API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepRS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Features</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Features.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="features">
+<h1>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>With the great success of deep learning,DNN-based techniques have been widely used in CTR estimation task.</p>
+<p>DNN based CTR estimation models consists of the following 4 modules:
+<code class="docutils literal notranslate"><span class="pre">Input,Embedding,Low-order&amp;High-order</span> <span class="pre">Feature</span> <span class="pre">Extractor,Prediction</span></code></p>
+<dl class="docutils">
+<dt>Input&amp;Embedding</dt>
+<dd><p class="first">The  data in CTR estimation task  usually includes high sparse,high cardinality
+categorical features  and some dense numerical features.</p>
+<p>Since DNN are good at handling dense numerical features,we usually map the sparse categorical
+features to dense numerical through <cite>embedding technique</cite>.</p>
+<p class="last">For numerical features,we usually apply <cite>discretization</cite> or <cite>normalization</cite> on them.</p>
+</dd>
+<dt>Feature Extractor</dt>
+<dd><p class="first">Low-order Extractor learns feature interaction through  product between vectors.
+Factorization-Machine and it’s variants are widely used to learn the low-order feature interaction.</p>
+<p class="last">High-order Extractor learns feature combination through complex neural network functions like MLP,Cross Net,etc.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fnn-factorization-supported-neural-network">
+<h3>FNN (Factorization-supported Neural Network)<a class="headerlink" href="#fnn-factorization-supported-neural-network" title="Permalink to this headline">¶</a></h3>
+<p>According to the paper,FNN learn embedding vectors of categorical data via pre-trained FM.
+It use FM’s latent vector to initialiaze the embedding vectors.During the training stage,it
+concatenates the embedding vectors and feeds them into a MLP(MultiLayer Perceptron).</p>
+<p><strong>FNN api</strong> <a class="reference external" href="./deepctr.models.fnn.html">link</a></p>
+<a class="reference internal image-reference" href="_images/FNN.png"><img alt="_images/FNN.png" class="align-center" src="_images/FNN.png" style="width: 843.5px; height: 599.0px;" /></a>
+<p><a class="reference external" href="https://arxiv.org/pdf/1601.02376.pdf">Zhang W, Du T, Wang J. Deep learning over multi-field categorical data[C]//European conference on information retrieval. Springer, Cham, 2016: 45-57.</a></p>
+</div>
+<div class="section" id="pnn-product-based-neural-network">
+<h3>PNN (Product-based Neural Network)<a class="headerlink" href="#pnn-product-based-neural-network" title="Permalink to this headline">¶</a></h3>
+<p>PNN concatenates sparse feature embeddings and the product between  embedding vectors as the input of MLP.</p>
+<p><strong>PNN api</strong> <a class="reference external" href="./deepctr.models.pnn.html">link</a></p>
+<a class="reference internal image-reference" href="_images/PNN.png"><img alt="_images/PNN.png" class="align-center" src="_images/PNN.png" style="width: 560.0px; height: 410.9px;" /></a>
+<p><a class="reference external" href="https://arxiv.org/pdf/1611.00144.pdf">Qu Y, Cai H, Ren K, et al. Product-based neural networks for user response prediction[C]//Data Mining (ICDM), 2016 IEEE 16th International Conference on. IEEE, 2016: 1149-1154.</a></p>
+</div>
+<div class="section" id="wide-deep">
+<h3>Wide &amp; Deep<a class="headerlink" href="#wide-deep" title="Permalink to this headline">¶</a></h3>
+<p>WDL’s deep part concatenates sparse feature embeddings as the input of MLP,the wide part use handcrafted feature as input.
+The logits of deep part and wide part are added to get the prediction probability.</p>
+<p><strong>WDL api</strong> <a class="reference external" href="./deepctr.models.wdl.html">link</a></p>
+<a class="reference internal image-reference" href="_images/WDL.png"><img alt="_images/WDL.png" class="align-center" src="_images/WDL.png" style="width: 860.0px; height: 598.0px;" /></a>
+<p><a class="reference external" href="https://arxiv.org/pdf/1606.07792.pdf">Cheng H T, Koc L, Harmsen J, et al. Wide &amp; deep learning for recommender systems[C]//Proceedings of the 1st Workshop on Deep Learning for Recommender Systems. ACM, 2016: 7-10.</a></p>
+</div>
+<div class="section" id="deepfm">
+<h3>DeepFM<a class="headerlink" href="#deepfm" title="Permalink to this headline">¶</a></h3>
+<p>DeepFM can be seen as an improvement of WDL and FNN.Compared with WDL,DeepFM use
+FM instead of LR in the wide part and use concatenation of embedding vectors as the input of MLP in the deep part.
+Compared with FNN,the embedding vector of FM and input to MLP are same.
+And they do not need a FM pretrained vector to initialiaze,they are learned end2end.</p>
+<p><strong>DeepFM api</strong> <a class="reference external" href="./deepctr.models.deepfm.html">link</a></p>
+<a class="reference internal image-reference" href="_images/DeepFM.png"><img alt="_images/DeepFM.png" class="align-center" src="_images/DeepFM.png" style="width: 846.0px; height: 599.0px;" /></a>
+<p><a class="reference external" href="http://www.ijcai.org/proceedings/2017/0239.pdf">Guo H, Tang R, Ye Y, et al. Deepfm: a factorization-machine based neural network for ctr prediction[J]. arXiv preprint arXiv:1703.04247, 2017.</a></p>
+</div>
+<div class="section" id="mlr-mixed-logistic-regression-piece-wise-linear-model">
+<h3>MLR(Mixed Logistic Regression/Piece-wise Linear Model)<a class="headerlink" href="#mlr-mixed-logistic-regression-piece-wise-linear-model" title="Permalink to this headline">¶</a></h3>
+<p>MLR can be viewed as a combination of 2*m LR model,m is the piece(region) number.
+m LR model learns the weight that the sample belong to each region,another m LR model learn sample’s click probability in the region.
+Finally,the sample’s CTR is a weighted sum of each region’s click probability.Notice the weight is normalized weight.</p>
+<p><strong>MLR api</strong> <a class="reference external" href="./deepctr.models.mlr.html">link</a></p>
+<a class="reference internal image-reference" href="_images/MLR.png"><img alt="_images/MLR.png" class="align-center" src="_images/MLR.png" style="width: 855.0px; height: 610.5px;" /></a>
+<p><a class="reference external" href="http://arxiv.org/abs/1704.05194">Gai K, Zhu X, Li H, et al. Learning Piece-wise Linear Models from Large Scale Data for Ad Click Prediction[J]. arXiv preprint arXiv:1704.05194, 2017.</a></p>
+</div>
+<div class="section" id="nfm-neural-factorization-machine">
+<h3>NFM (Neural Factorization Machine)<a class="headerlink" href="#nfm-neural-factorization-machine" title="Permalink to this headline">¶</a></h3>
+<p>NFM use a bi-interaction pooling layer to learn feature interaction between
+embedding vectors and compress the result into a singe vector which has the same size as a single embedding vector.
+And then fed it into a MLP.The output logit of MLP and the output logit of linear part are added to get the prediction probability.</p>
+<p><strong>NFM api</strong> <a class="reference external" href="./deepctr.models.nfm.html">link</a></p>
+<a class="reference internal image-reference" href="_images/NFM.png"><img alt="_images/NFM.png" class="align-center" src="_images/NFM.png" style="width: 843.5px; height: 769.0px;" /></a>
+<p><a class="reference external" href="https://arxiv.org/pdf/1708.05027.pdf">He X, Chua T S. Neural factorization machines for sparse predictive analytics[C]//Proceedings of the 40th International ACM SIGIR conference on Research and Development in Information Retrieval. ACM, 2017: 355-364.</a></p>
+</div>
+<div class="section" id="afm-attentional-factorization-machine">
+<h3>AFM (Attentional Factorization Machine)<a class="headerlink" href="#afm-attentional-factorization-machine" title="Permalink to this headline">¶</a></h3>
+<p>AFM is a variant of FM,tradional FM sums the inner product of embedding vector uniformly.
+AFM can be seen as weighted sum of feature interactions.The weight is learned by a small MLP.</p>
+<p><strong>AFM api</strong> <a class="reference external" href="./deepctr.models.afm.html">link</a></p>
+<a class="reference internal image-reference" href="_images/AFM.png"><img alt="_images/AFM.png" class="align-center" src="_images/AFM.png" style="width: 835.8px; height: 323.4px;" /></a>
+<p><a class="reference external" href="http://www.ijcai.org/proceedings/2017/435">Xiao J, Ye H, He X, et al. Attentional factorization machines: Learning the weight of feature interactions via attention networks[J]. arXiv preprint arXiv:1708.04617, 2017.</a></p>
+</div>
+<div class="section" id="dcn-deep-cross-network">
+<h3>DCN (Deep &amp; Cross Network)<a class="headerlink" href="#dcn-deep-cross-network" title="Permalink to this headline">¶</a></h3>
+<p>DCN use a Cross Net to learn both low and high order feature interaction explicitly,and use a MLP to learn feature interaction implicitly.
+The output of Cross Net and MLP are concatenated.The concatenated vector are feed into one fully connected layer to get the prediction probability.</p>
+<p><strong>DCN api</strong> <a class="reference external" href="./deepctr.models.dcn.html">link</a></p>
+<a class="reference internal image-reference" href="_images/DCN.png"><img alt="_images/DCN.png" class="align-center" src="_images/DCN.png" style="width: 525.0px; height: 510.99999999999994px;" /></a>
+<p><a class="reference external" href="https://arxiv.org/abs/1708.05123">Wang R, Fu B, Fu G, et al. Deep &amp; cross network for ad click predictions[C]//Proceedings of the ADKDD‘17. ACM, 2017: 12.</a></p>
+</div>
+<div class="section" id="din-deep-interest-network">
+<h3>DIN (Deep Interest Network)<a class="headerlink" href="#din-deep-interest-network" title="Permalink to this headline">¶</a></h3>
+<p>DIN introduce a attention method to learn from sequence(multi-valued) feature.
+Tradional method usually use sum/mean pooling on sequence feature.
+DIN use a local activation unit to get the activation score between candidate item and history items.
+User’s interest are represented by weighted sum of user behaviors.
+user’s interest vector and other embedding vectors are concatenated and fed into a MLP to get the prediction.</p>
+<p><strong>DIN api</strong> <a class="reference external" href="./deepctr.models.din.html">link</a> <strong>DIN demo</strong> <a class="reference external" href="https://github.com/shenweichen/DeepCTR/tree/master/examples/run_din.py">link</a></p>
+<a class="reference internal image-reference" href="_images/DIN.png"><img alt="_images/DIN.png" class="align-center" src="_images/DIN.png" style="width: 892.5px; height: 489.99999999999994px;" /></a>
+<p><a class="reference external" href="https://arxiv.org/pdf/1706.06978.pdf">Zhou G, Zhu X, Song C, et al. Deep interest network for click-through rate prediction[C]//Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining. ACM, 2018: 1059-1068.</a></p>
+</div>
+<div class="section" id="xdeepfm">
+<h3>xDeepFM<a class="headerlink" href="#xdeepfm" title="Permalink to this headline">¶</a></h3>
+<p>xDeepFM use a Compressed Interaction Network (CIN) to learn both low and high order feature interaction explicitly,and use a MLP to learn feature interaction implicitly.
+In each layer of CIN,first compute outer products between <span class="math notranslate nohighlight">\(x^k\)</span> and <span class="math notranslate nohighlight">\(x_0\)</span> to get a tensor <span class="math notranslate nohighlight">\(Z_{k+1}\)</span>,then use a 1DConv to learn feature maps <span class="math notranslate nohighlight">\(H_{k+1}\)</span> on this tensor.
+Finally,apply sum pooling on all the feature maps <span class="math notranslate nohighlight">\(H_k\)</span> to get one vector.The vector is used to compute the logit that CIN contributes.</p>
+<p><strong>xDeepFM api</strong> <a class="reference external" href="./deepctr.models.xdeepfm.html">link</a></p>
+<a class="reference internal image-reference" href="_images/CIN.png"><img alt="_images/CIN.png" class="align-center" src="_images/CIN.png" style="width: 941.4999999999999px; height: 371.7px;" /></a>
+<a class="reference internal image-reference" href="_images/xDeepFM.png"><img alt="_images/xDeepFM.png" class="align-center" src="_images/xDeepFM.png" style="width: 648.1999999999999px; height: 423.5px;" /></a>
+<p><a class="reference external" href="https://arxiv.org/pdf/1803.05170.pdf">Lian J, Zhou X, Zhang F, et al. xDeepFM: Combining Explicit and Implicit Feature Interactions for Recommender Systems[J]. arXiv preprint arXiv:1803.05170, 2018.</a></p>
+</div>
+<div class="section" id="autoint-automatic-feature-interaction">
+<h3>AutoInt(Automatic Feature Interaction)<a class="headerlink" href="#autoint-automatic-feature-interaction" title="Permalink to this headline">¶</a></h3>
+<p>AutoInt use a interacting layer to model the interactions between different features.
+Within each interacting layer, each feature is allowed to interact with all the other features and is able to automatically identify relevant features to form meaningful higher-order features via the multi-head attention mechanism.
+By stacking multiple interacting layers,AutoInt is able to model different orders of feature interactions.</p>
+<p><strong>AutoInt api</strong> <a class="reference external" href="./deepctr.models.autoint.html">link</a></p>
+<a class="reference internal image-reference" href="_images/InteractingLayer.png"><img alt="_images/InteractingLayer.png" class="align-center" src="_images/InteractingLayer.png" style="width: 536.1999999999999px; height: 352.79999999999995px;" /></a>
+<a class="reference internal image-reference" href="_images/AutoInt.png"><img alt="_images/AutoInt.png" class="align-center" src="_images/AutoInt.png" style="width: 557.1999999999999px; height: 420.7px;" /></a>
+<p><a class="reference external" href="https://arxiv.org/abs/1810.11921">Song W, Shi C, Xiao Z, et al. AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks[J]. arXiv preprint arXiv:1810.11921, 2018.</a></p>
+</div>
+</div>
+<div class="section" id="layers">
+<h2>Layers<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h2>
+<p>The models of deepctr are modular,
+so you can use different modules to build your own models.</p>
+<p>The module is a class that inherits from <code class="docutils literal notranslate"><span class="pre">tf.keras.layers.Layer</span></code>,it has
+the same attributes and methods as keras Layers like <code class="docutils literal notranslate"><span class="pre">tf.keras.layers.Dense()</span></code> etc</p>
+<p>You can see layers API in <a class="reference external" href="./deepctr.layers.html">layers</a></p>
+</div>
+<div class="section" id="activations">
+<h2>Activations<a class="headerlink" href="#activations" title="Permalink to this headline">¶</a></h2>
+<p>Some custom activation functions.</p>
+<p>You can see activations  API in <a class="reference external" href="./deepctr.activations.html">activations</a></p>
+</div>
+<div class="section" id="sequence">
+<h2>Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h2>
+<p>The sequence module aims to process variable-length sequence data.</p>
+<p>You can see sequences  API in <a class="reference external" href="./deepctr.sequence.html">sequence</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Demo.html" class="btn btn-neutral float-right" title="Demos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Quick-Start.html" class="btn btn-neutral" title="Quick-Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Mowar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

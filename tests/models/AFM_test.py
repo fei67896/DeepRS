@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
-from deepctr.models import AFM
-from ..utils import check_model
+from deeprs.models import AFM
+from tests.utils import check_model
 
 
 @pytest.mark.parametrize(

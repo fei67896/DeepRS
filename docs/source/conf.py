@@ -19,14 +19,14 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'DeepCTR'
-copyright = '2018, Weichen Shen'
-author = 'Weichen Shen'
+project = 'DeepRS'
+copyright = '2018, Mowar'
+author = 'Mowar'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.2.1'
+release = '0.0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -106,7 +106,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DeepCTRdoc'
+htmlhelp_basename = 'DeepRSdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -133,7 +133,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'DeepCTR.tex', 'DeepCTR Documentation',
+    (master_doc, 'DeepRS.tex', 'DeepRS Documentation',
      'Weichen Shen', 'manual'),
 ]
 
@@ -143,7 +143,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'deepctr', 'DeepCTR Documentation',
+    (master_doc, 'deepRS', 'DeepRS Documentation',
      [author], 1)
 ]
 
@@ -154,8 +154,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'DeepCTR', 'DeepCTR Documentation',
-     author, 'DeepCTR', 'One line description of project.',
+    (master_doc, 'deepRS', 'DeepRS Documentation',
+     author, 'DeepRS', 'One line description of project.',
      'Miscellaneous'),
 ]
 

@@ -34,7 +34,7 @@ According to the paper,FNN learn embedding vectors of categorical data via pre-t
 It use FM's latent vector to initialiaze the embedding vectors.During the training stage,it 
 concatenates the embedding vectors and feeds them into a MLP(MultiLayer Perceptron). 
 
-**FNN api** `link <./deepctr.models.fnn.html>`_
+**FNN api** `link <./deeprs.models.fnn.html>`__
 
 
 .. image:: ../pics/FNN.png
@@ -51,7 +51,7 @@ PNN (Product-based Neural Network)
 
 PNN concatenates sparse feature embeddings and the product between  embedding vectors as the input of MLP. 
 
-**PNN api** `link <./deepctr.models.pnn.html>`_
+**PNN api** `link <./deeprs.models.pnn.html>`__
 
 .. image:: ../pics/PNN.png
    :align: center
@@ -67,7 +67,7 @@ Wide & Deep
 WDL's deep part concatenates sparse feature embeddings as the input of MLP,the wide part use handcrafted feature as input.
 The logits of deep part and wide part are added to get the prediction probability.
 
-**WDL api** `link <./deepctr.models.wdl.html>`_
+**WDL api** `link <./deeprs.models.wdl.html>`__
 
 .. image:: ../pics/WDL.png
    :align: center
@@ -84,7 +84,7 @@ FM instead of LR in the wide part and use concatenation of embedding vectors as 
 Compared with FNN,the embedding vector of FM and input to MLP are same.
 And they do not need a FM pretrained vector to initialiaze,they are learned end2end. 
 
-**DeepFM api** `link <./deepctr.models.deepfm.html>`_
+**DeepFM api** `link <./deeprs.models.deepfm.html>`__
 
 .. image:: ../pics/DeepFM.png
    :align: center
@@ -99,7 +99,7 @@ MLR can be viewed as a combination of 2*m LR model,m is the piece(region) number
 m LR model learns the weight that the sample belong to each region,another m LR model learn sample's click probability in the region.
 Finally,the sample's CTR is a weighted sum of each region's click probability.Notice the weight is normalized weight.
 
-**MLR api** `link <./deepctr.models.mlr.html>`_
+**MLR api** `link <./deeprs.models.mlr.html>`__
 
 .. image:: ../pics/MLR.png
    :align: center
@@ -115,7 +115,7 @@ NFM use a bi-interaction pooling layer to learn feature interaction between
 embedding vectors and compress the result into a singe vector which has the same size as a single embedding vector.
 And then fed it into a MLP.The output logit of MLP and the output logit of linear part are added to get the prediction probability. 
 
-**NFM api** `link <./deepctr.models.nfm.html>`_
+**NFM api** `link <./deeprs.models.nfm.html>`__
 
 .. image:: ../pics/NFM.png
    :align: center
@@ -130,7 +130,7 @@ AFM (Attentional Factorization Machine)
 AFM is a variant of FM,tradional FM sums the inner product of embedding vector uniformly.
 AFM can be seen as weighted sum of feature interactions.The weight is learned by a small MLP. 
 
-**AFM api** `link <./deepctr.models.afm.html>`_
+**AFM api** `link <./deeprs.models.afm.html>`__
 
 .. image:: ../pics/AFM.png
    :align: center
@@ -145,7 +145,7 @@ DCN (Deep & Cross Network)
 DCN use a Cross Net to learn both low and high order feature interaction explicitly,and use a MLP to learn feature interaction implicitly.
 The output of Cross Net and MLP are concatenated.The concatenated vector are feed into one fully connected layer to get the prediction probability. 
 
-**DCN api** `link <./deepctr.models.dcn.html>`_
+**DCN api** `link <./deeprs.models.dcn.html>`__
 
 .. image:: ../pics/DCN.png
    :align: center
@@ -163,8 +163,8 @@ DIN use a local activation unit to get the activation score between candidate it
 User's interest are represented by weighted sum of user behaviors.
 user's interest vector and other embedding vectors are concatenated and fed into a MLP to get the prediction. 
 
-**DIN api** `link <./deepctr.models.din.html>`_ **DIN demo** `link <https://github.com/shenweichen/DeepCTR/tree/master/examples
-/run_din.py>`_
+**DIN api** `link <./deeprs.models.din.html>`__ **DIN demo** `link <https://github.com/shenweichen/DeepCTR/tree/master/examples
+/run_din.py>`__
 
 .. image:: ../pics/DIN.png
    :align: center
@@ -180,7 +180,7 @@ In each layer of CIN,first compute outer products between :math:`x^k` and :math:
 Finally,apply sum pooling on all the feature maps :math:`H_k` to get one vector.The vector is used to compute the logit that CIN contributes.
 
 
-**xDeepFM api** `link <./deepctr.models.xdeepfm.html>`_
+**xDeepFM api** `link <./deeprs.models.xdeepfm.html>`__
 
 .. image:: ../pics/CIN.png
    :align: center
@@ -199,7 +199,7 @@ AutoInt use a interacting layer to model the interactions between different feat
 Within each interacting layer, each feature is allowed to interact with all the other features and is able to automatically identify relevant features to form meaningful higher-order features via the multi-head attention mechanism.
 By stacking multiple interacting layers,AutoInt is able to model different orders of feature interactions. 
 
-**AutoInt api** `link <./deepctr.models.autoint.html>`_
+**AutoInt api** `link <./deeprs.models.autoint.html>`__
 
 .. image:: ../pics/InteractingLayer.png
    :align: center
@@ -220,7 +220,7 @@ so you can use different modules to build your own models.
 The module is a class that inherits from ``tf.keras.layers.Layer``,it has
 the same attributes and methods as keras Layers like ``tf.keras.layers.Dense()`` etc
 
-You can see layers API in `layers <./deepctr.layers.html>`_ 
+You can see layers API in `layers <./deeprs.layers.html>`__
 
 
 Activations
@@ -228,11 +228,11 @@ Activations
 
 Some custom activation functions.
 
-You can see activations  API in `activations <./deepctr.activations.html>`_ 
+You can see activations  API in `activations <./deeprs.activations.html>`__
 
 Sequence
 ----------
 
 The sequence module aims to process variable-length sequence data.
 
-You can see sequences  API in `sequence <./deepctr.sequence.html>`_ 
+You can see sequences  API in `sequence <./deeprs.sequence.html>`__

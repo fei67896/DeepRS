@@ -1,8 +1,12 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-from deepctr.models import DeepFM
+from deeprs.models import DeepFM
 
 if __name__ == "__main__":
+
+    import os
+
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
     data = pd.read_csv("./movielens_sample.txt")
     sparse_features = ["movie_id", "user_id",

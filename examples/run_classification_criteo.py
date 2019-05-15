@@ -1,15 +1,18 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
-from deepctr.models import DeepFM
+from deeprs.models import DeepFM
 
 if __name__ == "__main__":
-    data = pd.read_csv('./criteo_sample.txt')
 
+    import os
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+    data = pd.read_csv('./criteo_sample.txt')
     sparse_features = ['C' + str(i) for i in range(1, 27)]
     dense_features = ['I'+str(i) for i in range(1, 14)]
 
     data[sparse_features] = data[sparse_features].fillna('-1', )
     data[dense_features] = data[dense_features].fillna(0,)
+    data[dense_features] = data[dense_features].astype({feats:"float64" for feats in dense_features})
     target = ['label']
 
     # 1.Label Encoding for sparse features,and do simple Transformation for dense features

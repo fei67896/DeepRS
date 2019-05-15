@@ -1,5 +1,5 @@
 import numpy as np
-from deepctr.models import DIN
+from deeprs.models import DIN
 
 
 def get_xy_fd():

@@ -1,7 +1,7 @@
-import numpy as np
 import pytest
-from deepctr.models import DCN
-from ..utils import check_model
+import numpy as np
+from deeprs.models import DCN
+from tests.utils import check_model
 
 
 @pytest.mark.parametrize(
@@ -43,5 +43,5 @@ def test_DCN_invalid(embedding_size=8, cross_num=0, hidden_size=()):
                 hidden_size=hidden_size, keep_prob=0.5, )
 
 
-if __name__ == "__main__":
-    test_DCN(8, 2, [32, 32], 2)
+# if __name__ == "__main__":
+#     test_DCN(8, 2, [32, 32], 2)

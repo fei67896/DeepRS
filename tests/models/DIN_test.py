@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
-from deepctr.models import DIN
-from deepctr.activations import Dice
-from deepctr.utils import custom_objects
+from deeprs.models import DIN
+from deeprs.activations import Dice
+from deeprs.utils import custom_objects
 from tensorflow.python.keras.models import load_model, save_model
 from ..utils import check_model
 

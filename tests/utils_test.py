@@ -1,4 +1,4 @@
-from deepctr.utils import check_version
+from deeprs.utils import check_version
 
 
 def test_check_version():

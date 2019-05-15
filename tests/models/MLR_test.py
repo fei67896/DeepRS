@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from deepctr.models import MLR
+from deeprs.models import MLR
 from ..utils import check_model
 
 

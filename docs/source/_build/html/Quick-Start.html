@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quick-Start &mdash; DeepRS 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Features" href="Features.html" />
+    <link rel="prev" title="Welcome to DeepRS’s documentation!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepRS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Home:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick-Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-guide">Installation Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-4-steps-to-deepctr">Getting started: 4 steps to DeepCTR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-import-model">Step 1: Import model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-simple-preprocessing">Step 2: Simple preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-generate-feature-config-dict">Step 3: Generate feature config dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-generate-the-training-samples-and-train-the-model">Step 4: Generate the training samples and train the model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Demo.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="History.html">History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Models-API.html">Models API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deepctr.layers.html">Layers API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deepctr.activations.html">Activations API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deepctr.sequence.html">Sequence API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepRS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Quick-Start</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Quick-Start.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quick-start">
+<h1>Quick-Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation-guide">
+<h2>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">¶</a></h2>
+<p>Install deepctr package is through <code class="docutils literal notranslate"><span class="pre">pip</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">deepctr</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-started-4-steps-to-deepctr">
+<h2>Getting started: 4 steps to DeepCTR<a class="headerlink" href="#getting-started-4-steps-to-deepctr" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1-import-model">
+<h3>Step 1: Import model<a class="headerlink" href="#step-1-import-model" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span><span class="p">,</span><span class="n">MinMaxScaler</span>
+
+<span class="kn">from</span> <span class="nn">deepctr.models</span> <span class="kn">import</span> <span class="n">DeepFM</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./criteo_sample.txt&#39;</span><span class="p">)</span>
+
+<span class="n">sparse_features</span>  <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">)]</span>
+<span class="n">dense_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">)]</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+
+<span class="n">data</span><span class="p">[</span><span class="n">sparse_features</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">sparse_features</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;-1&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="n">dense_features</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">dense_features</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-simple-preprocessing">
+<h3>Step 2: Simple preprocessing<a class="headerlink" href="#step-2-simple-preprocessing" title="Permalink to this headline">¶</a></h3>
+<p>Usually there are two simple way to encode the sparse categorical feature for embedding</p>
+<ul class="simple">
+<li>Label Encoding: map the features to integer value from 0 ~ len(#unique) - 1</li>
+<li>Hash Encoding: map the features to a fix range,like 0 ~ 9999</li>
+</ul>
+<p>And for dense numerical features,they are usually  discretized to buckets,here we use normalization.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">feat</span> <span class="ow">in</span> <span class="n">sparse_features</span><span class="p">:</span>
+    <span class="n">lbe</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span><span class="c1"># or Hash</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">feat</span><span class="p">]</span> <span class="o">=</span> <span class="n">lbe</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">feat</span><span class="p">])</span>
+<span class="n">mms</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">data</span><span class="p">[</span><span class="n">dense_features</span><span class="p">]</span> <span class="o">=</span> <span class="n">mms</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">dense_features</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-generate-feature-config-dict">
+<h3>Step 3: Generate feature config dict<a class="headerlink" href="#step-3-generate-feature-config-dict" title="Permalink to this headline">¶</a></h3>
+<p>Here, for sparse features, we transform them into dense vectors by embedding techniques.
+For dense numerical features, we add a dummy index like LIBFM.
+That is to say, all dense features under the same field share the same embedding vector.
+In some implementations, the dense feature is concatened to the input embedding vectors of the deep network, you can modify the code yourself.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sparse_feature_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">feat</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="k">for</span> <span class="n">feat</span> <span class="ow">in</span> <span class="n">sparse_features</span><span class="p">}</span>
+<span class="n">dense_feature_list</span> <span class="o">=</span> <span class="n">dense_features</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-4-generate-the-training-samples-and-train-the-model">
+<h3>Step 4: Generate the training samples and train the model<a class="headerlink" href="#step-4-generate-the-training-samples-and-train-the-model" title="Permalink to this headline">¶</a></h3>
+<p>There are two rules here that we must follow</p>
+<blockquote>
+<div><ul class="simple">
+<li>The sparse features are placed in front of the dense features.</li>
+<li>The order of the feature we fit into the model must be consistent with the order of the feature dictionary iterations</li>
+</ul>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure the order is right</span>
+<span class="n">model_input</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="k">for</span> <span class="n">feat</span> <span class="ow">in</span> <span class="n">sparse_feature_dict</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="k">for</span> <span class="n">feat</span> <span class="ow">in</span> <span class="n">dense_feature_list</span><span class="p">]</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">DeepFM</span><span class="p">({</span><span class="s2">&quot;sparse&quot;</span><span class="p">:</span> <span class="n">sparse_feature_dict</span><span class="p">,</span> <span class="s2">&quot;dense&quot;</span><span class="p">:</span> <span class="n">dense_feature_list</span><span class="p">},</span> <span class="n">final_activation</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;adam&quot;</span><span class="p">,</span> <span class="s2">&quot;binary_crossentropy&quot;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">],</span> <span class="p">)</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model_input</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+                    <span class="n">batch_size</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,)</span>
+</pre></div>
+</div>
+<p>You can check the full code <a class="reference external" href="./Demo.html">here</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Features.html" class="btn btn-neutral float-right" title="Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to DeepRS’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Mowar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
