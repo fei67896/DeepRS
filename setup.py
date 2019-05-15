@@ -22,8 +22,8 @@ setuptools.setup(
     python_requires='>=3.4',  # 3.4.6
     install_requires=REQUIRED_PACKAGES,
     extras_require={
-        "tf": ['tensorflow>=1.4.0,!=1.7.*,!=1.8.*'],
-        "tf_gpu": ['tensorflow-gpu>=1.4.0,!=1.7.*,!=1.8.*'],
+        "tf": ['tensorflow>=1.12.1,!=1.7.*,!=1.8.*'],
+        "tf_gpu": ['tensorflow-gpu>=1.12.1,!=1.7.*,!=1.8.*'],
     },
     entry_points={
     },
